@@ -12,24 +12,24 @@
 	Transaction processing
 </h1>
 	</header>
-	<form id="myForm" >
+	<form >
 		<h3>Confirm your phone number</h3>
 		<input type="tel" id="number" name="number" value="998877667" required>
-		<button onclick="redirectToTransaction()">Confirm</button>
+		<button onclick="function re()">Confirm</button>
 	</form>
 
 	<div id="message"></div>
 
-<script>
-  document.getElementById("myForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // prevent the form from submitting
-        var a=document.getElementsByName("number")[0].value;
-		var message= "Verify your fingerprint, link is sent to " + a ;
-		document.getElementById("message").innerHTML = message;
-  });
-        function redirectToTransaction() {
-          window.location.href = "transaction.html";
-        }
-</script>
+
+
+  <script>
+		var Btn = document.getElementById("sub");
+	
+			setTimeout(function re(){
+				window.location.href = "pay.html";
+			}, 5000);
+		
+	</script>
+
 </body>
 </html>
