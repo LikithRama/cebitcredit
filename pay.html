@@ -16,8 +16,25 @@
     <main>
         <label for="Pin" aria-setsize="25">Enter Pin</label>
         <input type="password" id="Pin" name="Pin" required>
-        <button type="submit">Pay Now</button>
+        <button type="submit" onclick="val()">Pay Now</button>
     </main>
-    
+    <script>
+        var s=2;
+        function val(){
+        var pin=document.getElementById("Pin").value;
+        var correct="1234";
+        if(pin === correct){
+            window.location.href = "success.html";
+        }
+        else if(s>0){
+            s=s-1;
+            alert("No of tries left:"+s);
+        }
+        else{
+            window.location.href="fail.html"
+        }
+        
+    }
+    </script>
 </body>
 </html>
